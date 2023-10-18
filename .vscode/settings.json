@@ -1,0 +1,24 @@
+{
+    "editor.tokenColorCustomizations": {
+    "comments": "#FF0000",
+    "textMateRules": [
+        {
+            "scope": "keyword.operator",
+            "settings": {
+                "foreground": "#03b600",
+                "fontStyle": "bold"
+            }
+        },
+        {
+            "scope" :"comment.block.documentation",
+            "settings": {
+                "foreground": "#d8d406",
+                "fontStyle": "bold"
+            }
+        }
+    ]
+    },
+    "cSpell.words": [
+        "harshbauddha"
+    ]
+}
