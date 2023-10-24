@@ -1,24 +1,22 @@
 {
-    "editor.tokenColorCustomizations": {
-    "comments": "#FF0000",
+  "editor.tokenColorCustomizations": {
+    "comments": "#ec11dd",
     "textMateRules": [
-        {
-            "scope": "keyword.operator",
-            "settings": {
-                "foreground": "#03b600",
-                "fontStyle": "bold"
-            }
-        },
-        {
-            "scope" :"comment.block.documentation",
-            "settings": {
-                "foreground": "#d8d406",
-                "fontStyle": "bold"
-            }
+      {
+        "scope": "keyword.operator",
+        "settings": {
+          "foreground": "#03b600",
+          "fontStyle": "bold"
         }
+      },
+      {
+        "scope": "comment.block.documentation",
+        "settings": {
+          "foreground": "#0ae1d6",
+          "fontStyle": "bold"
+        }
+      }
     ]
-    },
-    "cSpell.words": [
-        "harshbauddha"
-    ]
+  },
+  "cSpell.words": ["harshbauddha"]
 }
