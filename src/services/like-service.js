@@ -8,7 +8,7 @@ class LikeService {
   }
   async toggleLikes(modelId, modelType, userId) {
     let likeable;
-    let isAdded;
+
     if (modelType === "Tweet") {
       likeable = await this.tweetRepository.get(modelId);
     } else if (modelType === "Comment") {
@@ -23,10 +23,11 @@ class LikeService {
     });
 
     console.log(exists);
+    let isAdded;
     if (exists) {
       likeable.exists.pull(exists.id);
       await likeable.save();
-      await exists.remove();
+      await this.likeRepository.destroy(exists.id);
       isAdded = false;
     } else {
       const newLike = await this.likeRepository.create({
@@ -38,6 +39,7 @@ class LikeService {
       likeable.likes.push(newLike);
       await likeable.save();
     }
+    console.log(isAdded);
     return isAdded;
   }
 }

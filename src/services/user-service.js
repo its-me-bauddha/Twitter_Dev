@@ -35,6 +35,8 @@ class UserService {
       }
 
       console.log("user signIn successfully");
+      const token = user.genJWT();
+      return token;
     } catch (error) {
       throw error;
     }
