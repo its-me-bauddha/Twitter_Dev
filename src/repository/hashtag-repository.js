@@ -17,10 +17,10 @@ class HashtagRepository extends CrudRepository {
   }
 
   //! get hashtag by Name
-  async getHashtagByName(data) {
+  async findByName(data) {
     try {
       const hashtag = await Hashtag.find({
-        text: text,
+        text: data,
       });
       return hashtag;
     } catch (error) {

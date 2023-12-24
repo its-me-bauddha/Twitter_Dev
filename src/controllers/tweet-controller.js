@@ -7,14 +7,14 @@ createTweet = async (req, res) => {
     const data = req.body;
     const response = await tweetService.create(data);
 
-    return response.status(201).json({
+    return res.status(201).json({
       success: true,
       message: "successfully create the tweet !!!",
       data: response,
       error: {},
     });
   } catch (error) {
-    return response.status(500).json({
+    return res.status(500).json({
       success: false,
       message: "Error !! while creating the tweet",
       data: {},
@@ -23,18 +23,18 @@ createTweet = async (req, res) => {
   }
 };
 
-getTweet = async (req, res) => {
+getsTweet = async (req, res) => {
   try {
     const id = req.params.id;
     const response = await tweetService.getTweet(id);
-    return response.status(201).json({
+    return res.status(201).json({
       success: true,
       message: "successfully get the tweet !!!",
       data: response,
       error: {},
     });
   } catch (error) {
-    return response.status(500).json({
+    return res.status(500).json({
       success: false,
       message: "Error !! while fetching the tweet",
       data: {},
@@ -45,5 +45,5 @@ getTweet = async (req, res) => {
 
 module.exports = {
   createTweet,
-  getTweet,
+  getsTweet,
 };

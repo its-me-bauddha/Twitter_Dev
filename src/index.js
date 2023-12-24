@@ -5,7 +5,8 @@ const router = require("./routes");
 const port = 3001;
 (bodyParser = require("body-parser")), app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use("/", router);
+//localhost : 3001/api/tweet
+app.use("/api", router);
 
 app.get("/", (req, res) => res.send("Hello World!"));
 app.listen(port, async () => {

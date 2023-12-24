@@ -4,7 +4,7 @@ const tweetSchema = new mongoose.Schema(
   {
     content: {
       type: String,
-      // required: true,
+       required: true,
       // max: [250, "tweets cannot exceed 250 characters"],
     },
     likes: {
@@ -16,12 +16,7 @@ const tweetSchema = new mongoose.Schema(
     comment: {
       type: String,
     },
-    // hashtags: [
-    //   {
-    //     type: mongoose.Schema.Types.ObjectId,
-    //     ref: "HashTag",
-    //   },
-    //},
+    
   },
   { timestamps: true }
 );
